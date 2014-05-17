@@ -1,0 +1,15 @@
+{
+  "name": "jqplot-popup",
+  "version": "0.0.1",
+  "description": "Create an awesome popup using ractive and jqplot",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Robert DeLuca",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "gulp": "~3.6.2",
+    "gulp-sass": "~0.7.1"
+  }
+}

@@ -1,0 +1,71 @@
+//*------------------------------------*
+//    Graph Pop Up Module
+//*------------------------------------*
+
+$popup_border_color: #ddd;
+
+.graph-popup{
+  -webkit-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  border-radius: 6px;
+  position: absolute;
+  top: -10000px;
+  left: -1000px;
+  display: none;
+  z-index: 100;
+  background-color: white;
+  border: 1px solid $popup_border_color;
+  text-align: center;
+  width: 160px;
+  .popup-title{
+    -webkit-border-top-left-radius: 6px;
+    -webkit-border-top-right-radius: 6px;
+    -moz-border-radius-topleft: 6px;
+    -moz-border-radius-topright: 6px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    background-color: #F5F5F5;
+    padding: 8px;
+    h2{
+      font-size: 16px;
+      line-height: 19px;
+      margin: 0;
+    }
+  }
+  .popup-body{
+    padding: 10px;
+    .number-callout{
+      display: block;
+      margin-bottom: 4px;
+      font:{
+        size: 27px;
+        weight: 700;
+      }
+    }
+    .number-label{
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+  &:before,
+  &:after{
+    position: absolute;
+    content: "";
+    top: 47px;
+    left: -10px;
+    width: 0; 
+    height: 0;
+    border:{
+     top: 10px solid transparent;
+     bottom: 10px solid transparent;
+     right: 10px solid white;
+    }
+  }
+  &:before{
+    border-right: 10px solid $popup_border_color;
+    left: -11px;
+  }
+}
