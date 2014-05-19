@@ -21,6 +21,13 @@ $(document).ready(function(){
   });
 });
 
+//Close the popup when you're not clicking on the graph
+$(document).on("click",function(e){
+  if (e.target != $(".jqplot-event-canvas")[0]){
+    $(".graph-popup").hide();
+  }
+});
+
 //We use the jqplotDataClick event to get the area clicked and the data of that area
 $("#pie1").bind("jqplotDataClick", function(ev, seriesIndex, pointIndex, data){
   console.log(ev);
@@ -34,13 +41,6 @@ $("#pie1").bind("jqplotDataClick", function(ev, seriesIndex, pointIndex, data){
   popup_window.css({
     top: (ev.pageY - (popup_window.height() / 2)),
     left: (ev.pageX + 15)
-  });
-
-  //Close the popup when you're not clicking on the graph
-  $(document).click(function(e){
-    if (e.target != $(".jqplot-event-canvas")[0]){
-      $(".graph-popup").hide();
-    }
   });
 
   //Add a comma to large numbers
